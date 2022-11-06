@@ -1,49 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela</title>
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        table{
+        table {
             border-collapse: collapse;
-            width: 500px;
+            width: 400px;
         }
 
-        thead th,td{
+        thead th,
+        td {
             border: 1px solid black;
             text-align: center;
             padding: 5px;
         }
-        .edit{
-            text-align: left;
+
+        tbody th,
+        td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
         }
-        .editcolor{
+
+        .edit {
+            text-align: left;
+
+        }
+
+        .editcolor {
             background-color: gray;
             color: white;
         }
     </style>
 </head>
+
 <body>
     <table>
         <thead>
             <tr class="editcolor">
-                <th rowspan="2">Área</th>
-                <th rowspan="2">Disciplinas</th>
-                <th colspan="2">Notas</th>
-                <th rowspan="2">Media</th>
+                <th rowspan="2" scope="row">Área</th>
+                <th rowspan="2" scope="col">Disciplinas</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Media</th>
             </tr>
             <tr class="editcolor">
-                <th>Nota 1</th>
-                <th>Nota 2</th>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
             </tr>
+        </thead>
+        <tbody>
             <tr>
-                <th rowspan="4">Exatas</th>
+                <th rowspan="4" scope="rowgroup">Exatas</th>
                 <td class="edit">Matemática</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -68,11 +83,11 @@
                 <td>0.0</td>
             </tr>
             <tr class="editcolor">
-                <th class="edit" colspan="4">Média de Exastas</th>
+                <th class="edit" colspan="4" scope="row">Média de Exastas</th>
                 <td>0.0</td>
             </tr>
             <tr>
-                <th rowspan="2">Humanas</th>
+                <th rowspan="2" scope="rowgroup">Humanas</th>
                 <td class="edit">História</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -85,10 +100,11 @@
                 <td>0.0</td>
             </tr>
             <tr class="editcolor">
-                <th class="edit" colspan="4">Media de Humanas</th>
+                <th class="edit" colspan="4" scope="row">Media de Humanas</th>
                 <td>0.0</td>
             </tr>
-        </thead>
+        </tbody>
     </table>
 </body>
+
 </html>
